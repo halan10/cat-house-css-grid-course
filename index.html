@@ -26,11 +26,25 @@
         <ul class="posts">
           <li class="post">
             <a href="#">
-              <img
-                src="images/cats-and-their-skills.png"
-                alt="cats and their skills"
-                class="post-img"
-              />
+              <picture>
+                <!-- For viewports wider than 768px -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="images/cats-and-their-skills.png"
+                />
+
+                <!-- For viewports between 320px and 768px -->
+                <source
+                  media="(min-width: 320px) and (max-width: 767px)"
+                  srcset="images/cats-and-their-skills-small.png"
+                />
+
+                <!-- Fallback content -->
+                <img
+                  src="images/cats-and-their-skills-small.png"
+                  alt="Cats and their skills"
+                />
+              </picture>
               <div class="overlay">
                 <h2 class="post-title sub-title">
                   Коти та їхні чудові навички: від полювання до загадкових
